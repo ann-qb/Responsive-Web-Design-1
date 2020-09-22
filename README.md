@@ -3,4 +3,4 @@
 ### Design
 ![Design](Gardener-Website-Instructions.png)
 ### Webpage Screenshot
-![Screenshot][images/Screenshot.jpg]
+![Screenshot](images/Screenshot.jpg)
