@@ -1,11 +1,13 @@
 # Responsive Web Design
 ## Assignment 1 - Gardener Website
 #### Current Issues:
-Font not loading
-Button text is in all caps
-Is it possible to give 3 classes to a tag?
-Button border not working for btn-secondary
-Can't give padding to li in services while keeping 3 lis in a row
+
+How to give uniform sizes for project images
+Client image alignment issue
+Get gardening tips and email id margins overlapping
+Timing flex not working properly
+How to not select recursively
+Landscape and recent project bottom padding
 ### Design
 ![Design](Gardener-Website-Instructions.png)
 ### Webpage Screenshot

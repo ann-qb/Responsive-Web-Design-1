@@ -1,4 +1,4 @@
-@charset "utf-8"
+@charset "utf-8";
 
 /* CSS Document */
 
@@ -19,12 +19,12 @@
 /*................................................
     1. BASIC STYLING FOR COMMON HTML ELEMENTS
 .................................................*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 
 body {
     font: 16px Manrope-Medium;
@@ -73,7 +73,7 @@ a:focus {
 .................................................*/
 
 @font-face {
-    font-family: 'Manrope';
+    font-family: 'Manrope-Medium';
     src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
         url('../fonts/Manrope-Medium.woff') format('woff');
     font-weight: 500;
@@ -82,7 +82,7 @@ a:focus {
 }
   
 @font-face {
-    font-family: 'Manrope';
+    font-family: 'Manrope-Bold';
     src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
         url('../fonts/Manrope-Bold.woff') format('woff');
     font-weight: bold;
@@ -132,6 +132,7 @@ h3 {
 .btn {
     padding: 10px 10px;
     border-radius: 5px;
+    text-transform: capitalize;
 }
 .btn-primary {
     color: #ffffff;
@@ -139,8 +140,8 @@ h3 {
 }
 .btn-secondary {
     color: #709D61;
-    border: 1px #709D61;
-    background-color: #ffffff;
+    border: 1px solid #709D61;
+    background-color: #f7f6f4;
 }
 /*................................................
     4. SKELETON
@@ -192,7 +193,7 @@ nav a{
     padding: 5px 20px;
     width: 33.33%;
 }
-li img {
+.icon img {
     border-radius: 50%;
     border: 15px solid #F0F1EC  ;
 }
@@ -209,6 +210,75 @@ li p {
     flex-flow: row wrap;
 }
 #services li{
-    padding: 25px 0;
+    padding: 25px 20px;
     width: 33.33%;
+}
+#projects ul{
+    flex-flow: row wrap;
+}
+#projects li{
+    padding: 25px 20px;
+    height: 100%;
+    width: 33.33%;
+}
+#projects img{
+    margin: 0;
+    border-radius: 10px;
+}
+
+#client-img{
+    
+}
+.client-name{
+    font: 20px Manrope-Bold;
+    color: #000000;
+}
+.client-test{
+    width: 400px;
+}
+.client-test p{
+    margin-top: 20px;
+}
+#news-letter{
+    margin: 20px auto;
+    display: block;
+    width: 60%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+}
+#email-id{
+    width: 70%;
+    margin: auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+}
+#footer > ul{
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+#footer ul > li{
+    width: 25%;
+    padding: 10px;
+}
+.footer-headings{
+    font-weight: bolder;
+    font-size: 20px;
+    color: #000000;
+}
+#timing{
+    flex-flow: column wrap;
+}
+
+.timing-list{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.subscribe {
+    width: 100%;
+    margin: 10px;
+    padding: 50px;
+    background-color: #F1F2EE;
 }
