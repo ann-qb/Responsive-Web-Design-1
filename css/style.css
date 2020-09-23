@@ -19,13 +19,15 @@
 /*................................................
     1. BASIC STYLING FOR COMMON HTML ELEMENTS
 .................................................*/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+.hamburger{
 
-
+}
 body {
     font: 16px Manrope-Medium;
     color: #656565;
@@ -33,19 +35,16 @@ body {
     line-height: 22px;
     text-align: left;
 }
-
 ul {
     list-style: none;
 }
-
 a{
     text-decoration: none;
 }
-
 img {
     max-width: 100%;
+    object-fit: cover;
 }
-
 button,
 input[type="button"],
 input[type="submit"] {
@@ -53,21 +52,19 @@ input[type="submit"] {
     outline: none;
     margin: 30px auto;
 }
-
-/* a,
-a:hover,
-a:focus {
-    border: 0;
-    outline: none;
-    text-decoration: none;
+nav a {
+    padding: 20px;
 }
-
-
-  
- */
-
-
-
+nav a:hover{
+    color: #ffffff;
+    background-color: #709D61;
+}
+a {
+    color: #000000;
+}
+a:hover{
+    color: #709D61;
+}
  /*................................................
     2. TYPOS
 .................................................*/
@@ -116,6 +113,7 @@ h3 {
     color: #000000;
     text-align: center;
     margin: 20px 0;
+    line-height: 45px;
 }
 .text-secondary {
     font: 16px Manrope-Medium;
@@ -143,23 +141,25 @@ h3 {
     border: 1px solid #709D61;
     background-color: #f7f6f4;
 }
+
 /*................................................
     4. SKELETON
 .................................................*/
 
-
+#header {
+    padding: 25px 0;
+}
+main {
+    margin-bottom: 100px;
+}
+#footer {
+    padding-top: 35px;
+}
 
 /*................................................
     5. HEADER SECTION
 .................................................*/
-/* 
 
-#header h1{
-    align-self: center;
-} */
-#header {
-    padding: 20px 0;
-}
 #header .flex-box{
     justify-content: space-between;
     align-items: baseline;
@@ -169,20 +169,25 @@ nav a{
     color: #000000;
 }
 
-
 /*................................................
     6. BODY SECTION
 .................................................*/
+
 .panel {
     margin-bottom: 100px;
 }
 .left-panel,
 .right-panel {
+    padding: 20px;
     width: 50%;
 }
-.left-panel {
-    text-align: left;
+#testimonials .flex-box{
+    justify-content: center;
 }
+/* #testimonials .left-panel{
+    text-align: right;
+    padding-right: 20px;
+} */
 .highlight {
     color: #709D61;
 }
@@ -218,16 +223,14 @@ li p {
 }
 #projects li{
     padding: 25px 20px;
-    height: 100%;
+    height: 250px;
     width: 33.33%;
 }
 #projects img{
     margin: 0;
+    height: 100%;
+    width: 100%;
     border-radius: 10px;
-}
-
-#client-img{
-    
 }
 .client-name{
     font: 20px Manrope-Bold;
@@ -238,6 +241,15 @@ li p {
 }
 .client-test p{
     margin-top: 20px;
+}
+#client .left-panel{
+    text-align: right;
+}
+.subscribe {
+    width: 100%;
+    margin: 10px;
+    padding: 50px;
+    background-color: #F1F2EE;
 }
 #news-letter{
     margin: 20px auto;
@@ -255,13 +267,21 @@ li p {
     border-radius: 10px;
     text-align: left;
 }
+#email-list{
+    margin: 10px 10px;
+}
+
+/*................................................
+    7. FOOTER SECTION
+.................................................*/
+
 #footer > ul{
     flex-flow: row wrap;
     align-items: flex-start;
 }
-#footer ul > li{
+#footer > ul > li{
     width: 25%;
-    padding: 10px;
+    padding: 20px;
 }
 .footer-headings{
     font-weight: bolder;
@@ -271,14 +291,155 @@ li p {
 #timing{
     flex-flow: column wrap;
 }
-
-.timing-list{
+#timing li{
     flex-flow: row nowrap;
     justify-content: space-between;
-}
-.subscribe {
     width: 100%;
-    margin: 10px;
-    padding: 50px;
-    background-color: #F1F2EE;
+    padding: 5px 0;
+}
+hr{
+    margin: 20px 0 5px;
+    background-color: #c7c7c7;
+    border-color: #c7c7c7;
+}
+#foot-note{
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+}
+
+/*................................................
+    8. MEDIA QUERIES
+.................................................*/
+
+@media only screen and (max-width:1024px){
+    nav a{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .container{
+        max-width: 1024px;
+    }
+    .flex-box{
+        flex-flow: column wrap;
+    }
+    .welcome .left-panel{
+        order: 1;
+    }
+    .welcome .right-panel{
+        order: 0;
+    }
+    h2{
+        text-align: center;
+        max-width: 100%;
+    }
+    .left-panel,
+    .right-panel {
+        text-align: center;
+    }
+    #offer li {
+        width: 100%;
+    }
+    .text-secondary-left {
+        text-align: center;
+    }
+    #services li{
+        width: 100%;
+        text-align: center;
+    }
+    #projects li{
+        width: 50%;
+    }
+    #client {
+        display: flex;
+        width: 100%;
+        flex-flow: row nowrap;
+    }
+    #news-letter{
+        width: 80%;
+    }
+    #footer > ul{
+        flex-flow: column wrap;
+    }
+    #footer > ul > li{
+        width: 100%;
+        text-align: center;
+    }
+    .timing-list{
+        flex-flow: row nowrap;
+    }
+}
+
+@media only screen and (max-width:768px){
+    nav a{
+        display: none;
+    }
+    .hamburger{
+        display: block;
+    }
+    .container{
+        max-width: 768px;
+    }
+    .flex-box{
+        flex-flow: column wrap;
+    }
+    h2{
+        text-align: center;
+        max-width: 100%;
+    }
+    #testimonials .flex-box{
+        flex-flow: row wrap;
+        width: 100%;
+    }
+    .left-panel,
+    .right-panel {
+        text-align: center;
+    }
+    #offer li {
+        width: 100%;
+    }
+    .text-secondary-left {
+        text-align: center;
+    }
+    #services li{
+        width: 100%;
+        text-align: center;
+    }
+    #projects li{
+        width: 100%;
+    }
+    #client {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+    }
+    .client-test{
+        width: 100%;
+    }
+    .subscribe{
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+    #news-letter{
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin: 20px 0;
+    }
+    #footer > ul{
+        flex-flow: column wrap;
+    }
+    #footer > ul > li{
+        width: 100%;
+        text-align: center;
+    }
+    .timing-list{
+        flex-flow: row nowrap;
+    }
+    #foot-note{
+        padding: 10px;
+    }
 }
