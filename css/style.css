@@ -1,0 +1,214 @@
+@charset "utf-8"
+
+/* CSS Document */
+
+/* CSS DocumentProject: Gardener Website
+----------------------------------------------------------------------------------------------------------*/
+
+/*------------------Layout,Table of Contents-----------------------------------------------------------------
+1. BASIC STYLING FOR COMMON HTML ELEMENTS
+2. TYPOS
+3. COMMON CSS CLASSES
+4. SKELETON
+5. HEADER SECTION
+6. BODY SECTION
+7. FOOTER SECTION
+8. MEDIA QUERIES
+-----------------------------------------------------------------------------------------------------------*/
+
+/*................................................
+    1. BASIC STYLING FOR COMMON HTML ELEMENTS
+.................................................*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font: 16px Manrope-Medium;
+    color: #656565;
+    background-color: #f7f6f4;
+    line-height: 22px;
+    text-align: left;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+    border: 0;
+    outline: none;
+    margin: 30px auto;
+}
+
+/* a,
+a:hover,
+a:focus {
+    border: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+
+  
+ */
+
+
+
+ /*................................................
+    2. TYPOS
+.................................................*/
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
+        url('../fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'Manrope';
+    src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
+        url('../fonts/Manrope-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*................................................
+    3. COMMON CSS CLASSES
+.................................................*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.flex-box {
+    display: flex;
+    align-items: center;
+}
+h2 {
+    font-size: 45px;
+    color: #000000;
+    text-align: left;
+    max-width: 500px;
+    line-height: 55px;
+    margin: 10px 0 30px;
+}
+h3 {
+    font-size: 35px;
+    color: #000000;
+    text-align: center;
+    margin: 20px 0;
+}
+.text-secondary {
+    font: 16px Manrope-Medium;
+    color: #709D61;
+    text-align: center;
+    display: block;
+}
+.text-secondary-left {
+    font: 16px Manrope-Medium;
+    color: #709D61;
+    text-align: left;
+    display: block;
+}
+.btn {
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+.btn-primary {
+    color: #ffffff;
+    background-color: #709D61;
+}
+.btn-secondary {
+    color: #709D61;
+    border: 1px #709D61;
+    background-color: #ffffff;
+}
+/*................................................
+    4. SKELETON
+.................................................*/
+
+
+
+/*................................................
+    5. HEADER SECTION
+.................................................*/
+/* 
+
+#header h1{
+    align-self: center;
+} */
+#header {
+    padding: 20px 0;
+}
+#header .flex-box{
+    justify-content: space-between;
+    align-items: baseline;
+}
+nav a{
+    padding: 5px 15px;
+    color: #000000;
+}
+
+
+/*................................................
+    6. BODY SECTION
+.................................................*/
+.panel {
+    margin-bottom: 100px;
+}
+.left-panel,
+.right-panel {
+    width: 50%;
+}
+.left-panel {
+    text-align: left;
+}
+.highlight {
+    color: #709D61;
+}
+#offer {
+    text-align: center;
+}
+#offer li {
+    padding: 5px 20px;
+    width: 33.33%;
+}
+li img {
+    border-radius: 50%;
+    border: 15px solid #F0F1EC  ;
+}
+li h4 {
+    font: 20px Manrope-Bold;
+    color: #3a3a3a;
+}
+li img,
+li h4,
+li p {
+    margin: 15px 0;
+}
+#services ul{
+    flex-flow: row wrap;
+}
+#services li{
+    padding: 25px 0;
+    width: 33.33%;
+}
