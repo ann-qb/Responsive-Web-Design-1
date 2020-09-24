@@ -25,9 +25,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-.hamburger{
-
-}
 body {
     font: 16px Manrope-Medium;
     color: #656565;
@@ -167,6 +164,9 @@ main {
 nav a{
     padding: 5px 15px;
     color: #000000;
+}
+.hamburger {
+    display: none;
 }
 
 /*................................................
@@ -313,11 +313,49 @@ hr{
 .................................................*/
 
 @media only screen and (max-width:1024px){
-    nav a{
-        display: none;
+    #header .flex-box{
+        flex-flow: row nowrap;
     }
     .hamburger{
         display: block;
+    }
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 4px 20px;
+        position: relative;
+        user-select: none;
+    }
+    .menu-icon .navicon {
+        background: #709D61;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background: #709d61;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+    .menu-btn {
+        display: none;
+    }
+    nav a{
+        display: none;
     }
     .container{
         max-width: 1024px;
@@ -338,6 +376,7 @@ hr{
     .left-panel,
     .right-panel {
         text-align: center;
+        width: 100%;
     }
     #offer li {
         width: 100%;
@@ -373,11 +412,49 @@ hr{
 }
 
 @media only screen and (max-width:768px){
-    nav a{
-        display: none;
+    #header .flex-box{
+        flex-flow: row nowrap;
     }
     .hamburger{
         display: block;
+    }
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 4px 20px;
+        position: relative;
+        user-select: none;
+    }
+    .menu-icon .navicon {
+        background: #709D61;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background: #709d61;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+    .menu-btn {
+        display: none;
+    }
+    nav a{
+        display: none;
     }
     .container{
         max-width: 768px;
@@ -396,12 +473,13 @@ hr{
         max-width: 100%;
     }
     #testimonials .flex-box{
-        flex-flow: row wrap;
+        flex-flow: column wrap;
         width: 100%;
     }
     .left-panel,
     .right-panel {
         text-align: center;
+        width: 100%;
     }
     #offer li {
         width: 100%;
