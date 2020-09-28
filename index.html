@@ -6,6 +6,7 @@
     <title>Gardener</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/index.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,10 +19,17 @@
                     <a href="#contact">Contact</a>
                 </nav>
                 <div class="hamburger">
-                    <input class="menu-btn" type="checkbox" id="menu-btn">
+                    <input class="menu-btn" type="checkbox" id="menu-btn" onclick="dropDown()">
                     <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
                 </div>
             </div>
+                <div id="drop-down">
+                    <ul id="menu-list">
+                        <a href="#home" onclick="dropDownSelect()"><li>Home</li></a>
+                        <a href="#about" onclick="dropDownSelect()"><li>About</li></a>
+                        <a href="#contact" onclick="dropDownSelect()"><li>Contact</li></a>
+                    </ul>
+                </div>
         </header>
         <main>
             <section class="panel flex-box welcome" id="home">

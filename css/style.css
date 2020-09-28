@@ -168,6 +168,43 @@ nav a{
 .hamburger {
     display: none;
 }
+.hamburger .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.hamburger .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.hamburger .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.hamburger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.hamburger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+#drop-down {
+    margin: 10px 0; 
+    height: 0;
+    transition: height 0.3s linear;
+}
+#menu-list {
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s linear;
+}
+#drop-down li {
+    border: 1px solid #ffffff;
+    padding: 5px;
+    background-color: #709D61;
+}
+#drop-down li a {
+    color: #000000;
+    width: auto;
+}
+#drop-down > ul > a:hover {
+    color: #ffffff;
+}
 
 /*................................................
     6. BODY SECTION
