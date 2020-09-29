@@ -1,0 +1,581 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/* CSS DocumentProject: Gardener Website
+----------------------------------------------------------------------------------------------------------*/
+
+/*------------------Layout,Table of Contents-----------------------------------------------------------------
+1. BASIC STYLING FOR COMMON HTML ELEMENTS
+2. TYPOS
+3. COMMON CSS CLASSES
+4. SKELETON
+5. HEADER SECTION
+6. BODY SECTION
+7. FOOTER SECTION
+8. MEDIA QUERIES
+-----------------------------------------------------------------------------------------------------------*/
+
+/*................................................
+    1. BASIC STYLING FOR COMMON HTML ELEMENTS
+.................................................*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font: 16px Manrope-Medium;
+    color: #656565;
+    background-color: #f7f6f4;
+    line-height: 22px;
+    text-align: left;
+}
+ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+    object-fit: cover;
+}
+button,
+input[type="button"],
+input[type="submit"] {
+    border: 0;
+    outline: none;
+    margin: 30px auto;
+}
+nav a {
+    padding: 20px;
+}
+nav a:hover{
+    color: #ffffff;
+    background-color: #709D61;
+}
+a {
+    color: #000000;
+}
+a:hover{
+    color: #709D61;
+}
+ /*................................................
+    2. TYPOS
+.................................................*/
+
+@font-face {
+    font-family: 'Manrope-Medium';
+    src: url('../fonts/Manrope-Medium.woff2') format('woff2'),
+        url('../fonts/Manrope-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+  
+@font-face {
+    font-family: 'Manrope-Bold';
+    src: url('../fonts/Manrope-Bold.woff2') format('woff2'),
+        url('../fonts/Manrope-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/*................................................
+    3. COMMON CSS CLASSES
+.................................................*/
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.flex-box {
+    display: flex;
+    align-items: center;
+}
+h2 {
+    font-size: 45px;
+    color: #000000;
+    text-align: left;
+    max-width: 500px;
+    line-height: 55px;
+    margin: 10px 0 30px;
+}
+h3 {
+    font-size: 35px;
+    color: #000000;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 45px;
+}
+.text-secondary {
+    font: 16px Manrope-Medium;
+    color: #709D61;
+    text-align: center;
+    display: block;
+}
+.text-secondary-left {
+    font: 16px Manrope-Medium;
+    color: #709D61;
+    text-align: left;
+    display: block;
+}
+.btn {
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+.btn-primary {
+    color: #ffffff;
+    background-color: #709D61;
+}
+.btn-secondary {
+    color: #709D61;
+    border: 1px solid #709D61;
+    background-color: #f7f6f4;
+}
+
+/*................................................
+    4. SKELETON
+.................................................*/
+
+#header {
+    padding: 25px 0;
+}
+main {
+    margin-bottom: 100px;
+}
+#footer {
+    padding-top: 35px;
+}
+
+/*................................................
+    5. HEADER SECTION
+.................................................*/
+
+#header .flex-box{
+    justify-content: space-between;
+    align-items: baseline;
+}
+nav a{
+    padding: 5px 15px;
+    color: #000000;
+}
+.hamburger {
+    display: none;
+}
+.hamburger .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.hamburger .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+  
+.hamburger .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.hamburger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.hamburger .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+#drop-down {
+    margin: 10px 0; 
+    height: 0;
+    transition: height 0.3s linear;
+}
+#menu-list {
+    padding: 10px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.2s, opacity 0.2s linear;
+}
+#menu-list li {
+    border: 1px solid #ffffff;
+    padding: 5px;
+    background-color: #709D61;
+}
+#menu-list li a {
+    display: block;
+    color: #000000;
+    width: auto;
+}
+#menu-list > li > a:hover {
+    color: #ffffff;
+}
+
+/*................................................
+    6. BODY SECTION
+.................................................*/
+
+.panel {
+    margin-bottom: 100px;
+}
+.left-panel,
+.right-panel {
+    padding: 20px;
+    width: 50%;
+}
+#testimonials .flex-box{
+    justify-content: center;
+}
+/* #testimonials .left-panel{
+    text-align: right;
+    padding-right: 20px;
+} */
+.highlight {
+    color: #709D61;
+}
+#offer {
+    text-align: center;
+}
+#offer li {
+    padding: 5px 20px;
+    width: 33.33%;
+}
+.icon img {
+    border-radius: 50%;
+    border: 15px solid #F0F1EC  ;
+}
+li h4 {
+    font: 20px Manrope-Bold;
+    color: #3a3a3a;
+}
+li img,
+li h4,
+li p {
+    margin: 15px 0;
+}
+#services ul{
+    flex-flow: row wrap;
+}
+#services li{
+    padding: 25px 20px;
+    width: 33.33%;
+}
+#projects ul{
+    flex-flow: row wrap;
+}
+#projects li{
+    padding: 25px 20px;
+    height: 250px;
+    width: 33.33%;
+}
+#projects img{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+.client-name{
+    font: 20px Manrope-Bold;
+    color: #000000;
+}
+.client-test{
+    width: 400px;
+}
+.client-test p{
+    margin-top: 20px;
+}
+#client .left-panel{
+    text-align: right;
+}
+.subscribe {
+    width: 100%;
+    margin: 10px;
+    padding: 50px;
+    background-color: #F1F2EE;
+}
+#news-letter{
+    margin: 20px auto;
+    display: block;
+    width: 60%;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+}
+#email-id{
+    width: 70%;
+    margin: auto;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: left;
+}
+#email-list{
+    margin: 10px 10px;
+}
+
+/*................................................
+    7. FOOTER SECTION
+.................................................*/
+
+#footer > ul{
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+#footer > ul > li{
+    width: 25%;
+    padding: 20px;
+}
+#footer-text {
+    line-height: 30px;
+    margin-top: 0;
+}
+.footer-headings{
+    margin-top: 23px;
+    font-weight: bolder;
+    font-size: 20px;
+    color: #000000;
+}
+#footer > ul > li > ul > li {
+    padding: 4px 0;
+}
+#footer > ul > li > ul > li > a {
+    color: #656565;
+}
+#footer > ul > li > ul > li > a:hover {
+    color: #709D61;
+}
+#timing{
+    flex-flow: column wrap;
+}
+#timing li{
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+    padding: 8px 0;
+}
+hr{
+    margin: 20px 0 5px;
+    background-color: #c7c7c7;
+    border-color: #c7c7c7;
+}
+#foot-note{
+    font-size: 14px;
+    text-align: center;
+    padding: 20px;
+}
+
+/*................................................
+    8. MEDIA QUERIES
+.................................................*/
+
+@media only screen and (max-width:1024px){
+    #header .flex-box{
+        flex-flow: row nowrap;
+    }
+    .hamburger{
+        display: block;
+    }
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 4px 20px;
+        position: relative;
+        user-select: none;
+    }
+    .menu-icon .navicon {
+        background: #709D61;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background: #709d61;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+    .menu-btn {
+        display: none;
+    }
+    nav a{
+        display: none;
+    }
+    .container{
+        max-width: 1024px;
+    }
+    .flex-box{
+        flex-flow: column wrap;
+    }
+    .welcome .left-panel{
+        order: 1;
+    }
+    .welcome .right-panel{
+        order: 0;
+    }
+    h2{
+        text-align: center;
+        max-width: 100%;
+    }
+    .left-panel,
+    .right-panel {
+        text-align: center;
+        width: 100%;
+    }
+    #offer li {
+        width: 100%;
+    }
+    .text-secondary-left {
+        text-align: center;
+    }
+    #services li{
+        width: 100%;
+        text-align: center;
+    }
+    #projects li{
+        width: 50%;
+    }
+    #client {
+        display: flex;
+        width: 100%;
+        flex-flow: row nowrap;
+    }
+    #news-letter{
+        width: 80%;
+    }
+    #footer > ul{
+        flex-flow: column wrap;
+    }
+    #footer > ul > li{
+        width: 100%;
+        text-align: center;
+    }
+    .timing-list{
+        flex-flow: row nowrap;
+    }
+}
+
+@media only screen and (max-width:767px){
+    #header .flex-box{
+        flex-flow: row nowrap;
+    }
+    .hamburger{
+        display: block;
+    }
+    .menu-icon {
+        cursor: pointer;
+        display: block;
+        float: right;
+        padding: 4px 20px;
+        position: relative;
+        user-select: none;
+    }
+    .menu-icon .navicon {
+        background: #709D61;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+    }
+    .menu-icon .navicon:before,
+    .menu-icon .navicon:after {
+        background: #709d61;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+    }
+    .menu-icon .navicon:before {
+        top: 5px;
+    }
+    .menu-icon .navicon:after {
+        top: -5px;
+    }
+    .menu-btn {
+        display: none;
+    }
+    nav a{
+        display: none;
+    }
+    .container{
+        max-width: 768px;
+    }
+    .flex-box{
+        flex-flow: column wrap;
+    }
+    .welcome .left-panel{
+        order: 1;
+    }
+    .welcome .right-panel{
+        order: 0;
+    }
+    h2{
+        text-align: center;
+        max-width: 100%;
+    }
+    #testimonials .flex-box{
+        flex-flow: column wrap;
+        width: 100%;
+    }
+    .left-panel,
+    .right-panel {
+        text-align: center;
+        width: 100%;
+    }
+    #offer li {
+        width: 100%;
+    }
+    .text-secondary-left {
+        text-align: center;
+    }
+    #services li{
+        width: 100%;
+        text-align: center;
+    }
+    #projects li{
+        width: 100%;
+    }
+    #client {
+        display: flex;
+        width: 100%;
+        flex-flow: row wrap;
+    }
+    .client-test{
+        width: 100%;
+    }
+    .subscribe{
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+    }
+    #news-letter{
+        display: flex;
+        flex-flow: row nowrap;
+        width: 100%;
+        margin: 20px 0;
+    }
+    #footer > ul{
+        flex-flow: column wrap;
+    }
+    #footer > ul > li{
+        width: 100%;
+        text-align: center;
+    }
+    .timing-list{
+        flex-flow: row nowrap;
+    }
+    #foot-note{
+        padding: 10px;
+    }
+}

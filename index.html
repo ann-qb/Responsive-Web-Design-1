@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gardener</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="scripts/index.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header id="header">
+            <div class="flex-box">
+                <h1><a href=""><img src="images/logo.png" alt="Logo"></a></h1>
+                <nav class="flex-box">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="hamburger">
+                    <input class="menu-btn" type="checkbox" id="menu-btn" onclick="dropDown()">
+                    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+                </div>
+            </div>
+                <div id="drop-down">
+                    <ul id="menu-list">
+                        <li><a href="#home" onclick="dropDownSelect()">Home</a></li>
+                        <li><a href="#about" onclick="dropDownSelect()">About</a></li>
+                        <li><a href="#contact" onclick="dropDownSelect()">Contact</a></li>
+                    </ul>
+                </div>
+        </header>
+        <main>
+            <section class="panel flex-box welcome" id="home">
+                <div class="left-panel">
+                    <h2>Welcome to <span class="highlight">Gardener</span> Landscaping Company</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi 
+                        necessitatibus culpa architecto exercitationem voluptatum inventore 
+                        aut dignissimos reiciendis est ipsum? Assumenda quod nisi repellendus 
+                        consectetur commodi ratione fugiat alias obcaecati!
+                    </p>
+                    <button class="btn btn-primary">Contact Us</button>
+                </div>
+                <div class="right-panel">
+                    <img src="images/img-1.jpg" alt="Panel Image 1">
+                </div>
+            </section>
+            <section class="panel">
+                <span class="text-secondary">Offer</span>
+                <h3>What We Offer</h3>
+                <div id="offer">
+                    <ul  class="flex-box icon">
+                        <li>
+                            <img src="images/ico-1.png" alt="">
+                            <h4>Planning Your Garden</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/ico-2.png" alt="">
+                            <h4>Planning Your Garden</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/ico-3.png" alt="">
+                            <h4>Planning Your Garden</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="panel flex-box about" id="about">
+                <div class="left-panel">
+                    <img src="images/img-2.jpg" alt="Panel Image 2">
+                </div>
+                <div class="right-panel">
+                    <span class="text-secondary-left">About Us</span>
+                    <h2>Welcome To Our Gardening</h2>
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi 
+                        necessitatibus culpa architecto exercitationem voluptatum inventore 
+                        aut dignissimos reiciendis est ipsum? Assumenda quod nisi repellendus 
+                        consectetur commodi ratione fugiat alias obcaecati!
+                    </p>
+                    <button class="btn btn-secondary">Read More</button>
+                    
+                </div>
+            </section>
+            <section class="panel">
+                <span class="text-secondary">Services</span>
+                <h3>Landscape Solutions</h3>
+                <div id="services">
+                    <ul class="flex-box icon">
+                        <li>
+                            <img src="images/ico-4.png" alt="">
+                            <h4>Lawn Renovation</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/ico-5.png" alt="">
+                            <h4>Rubbish Removal</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/ico-6.png" alt="">
+                            <h4>Garden Walls</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/ico-7.png" alt="">
+                            <h4>Watering Garden</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/ico-3.png" alt="">
+                            <h4>Lawn Moving</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                        <li>
+                            <img src="images/ico-8.png" alt="">
+                            <h4>Garden Care</h4>
+                            <p>
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                                Doloremque debitis reiciendis earum qui dolore consectetur 
+                                ipsum, autem adipisci vel rerum perferendis quod maxime 
+                                harum a tempore explicabo omnis ducimus pariatur.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="panel">
+                <span class="text-secondary">Our Work</span>
+                <h3>Our Recent Projects</h3>
+                <div id="projects">
+                    <ul class="flex-box">
+                        <li><img src="images/projects/img-1.jpg" alt="Project Image"></li>
+                        <li><img src="images/projects/img-2.png" alt="Project Image"></li>
+                        <li><img src="images/projects/img-3.jpg" alt="Project Image"></li>
+                        <li><img src="images/projects/img-4.jpg" alt="Project Image"></li>
+                        <li><img src="images/projects/img-5.jpeg" alt="Project Image"></li>
+                        <li><img src="images/projects/img-6.jpg" alt="Project Image"></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="panel" id="testimonials">
+                <span class="text-secondary">Testimonials</span>
+                <h3>Clients Say About Us</h3>
+                <div class="flex-box" id="client">
+                    <div class="left-panel">
+                        <img src="images/testimonial/testimonial-2.jpg" alt="Client Image">
+                    </div>
+                    <div class="right-panel">
+                        <div class="client-test">
+                            <img src="images/quote.png" alt="Quote">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis enim 
+                            itaque reprehenderit commodi esse reiciendis unde nesciunt mollitia, hic 
+                            in, iure odit deleniti suscipit ex placeat, cum ratione accusantium 
+                            exercitationem!
+                        </p>
+                        <p>
+                            <span class="client-name">Jonathan Reinink</span> <br> CEO
+                        </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="panel subscribe">
+                <span class="text-secondary">NewsLetter</span>
+                <h3>Get Gardening Tips</h3>
+                <div id="news-letter">
+                    <input type="email" placeholder="Enter Your Email Address" name="email" required id="email-id">
+                    <button class="btn btn-primary" id="email-list">Subscribe</button>
+                </div>
+            </section>
+        </main>
+        <hr>
+        <footer id="footer">
+            <ul class="flex-box">
+                <li>
+                    <img src="images/logo.png" alt="">
+                    <p id="footer-text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                        Quo, labore aliquid praesentium excepturi asperiores minima
+                    </p>
+                </li>
+                <li>
+                    <p class="footer-headings">Useful Links</p>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="footer-headings" id="contact">Contact</p>
+                    <ul>
+                        <li>Live Chat</li>
+                        <li>+89009977-776</li>
+                        <li>gardeen@contact.us</li>
+                        <li>Facebook</li>
+                        <li>Instagram</li>
+                    </ul>
+                </li>
+                <li>
+                    <p class="footer-headings">Contact</p>
+                    <ul class="flex-box" id="timing">
+                        <li class="flex-box"><div>Saturday</div><div>8.30 am - 4.00 pm</div></li>
+                        <li class="flex-box"><div>Sunday</div><div>8.30 am - 4.00 pm</div></li>
+                        <li class="flex-box"><div>Monday</div><div>8.30 am - 4.00 pm</div></li>
+                        <li class="flex-box"><div>Tuesday</div><div>8.30 am - 4.00 pm</div></li>
+                        <li class="flex-box"><div>Wednesday</div><div>8.30 am - 4.00 pm</div></li>
+                        <li class="flex-box"><div>Thursday</div><div>8.30 am - 4.00 pm</div></li>
+                        <li class="flex-box"><div>Friday</div><div class="highlight">Closed</div></li>
+                    </ul>
+                </li>
+            </ul>
+            <hr>
+            <p id="foot-note">Copyright @ 2020 Gardener. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
